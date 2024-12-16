@@ -1,9 +1,13 @@
 package com.example.farmacia.model;
 
+import com.example.farmacia.model.Produto;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -17,6 +21,11 @@ public class Produto {
 	private String nome;
 	
 	private float valor;
+	
+	@ManyToOne
+	@JsonIgnoreProperties("produto")
+	private Categoria categoria;
+
 
 	public Long getId() {
 		return id;

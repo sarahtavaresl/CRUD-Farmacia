@@ -2,7 +2,7 @@ package com.example.farmacia.model;
 
 import java.util.List;
 
-import com.example.demo.model.Produto;
+import com.example.farmacia.model.Categoria;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.CascadeType;
